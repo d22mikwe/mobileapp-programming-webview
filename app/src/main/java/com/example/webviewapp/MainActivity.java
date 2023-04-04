@@ -5,6 +5,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -26,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         WebView webView = findViewById(R.id.my_webview);
-
+        webView.setWebViewClient(new WebViewClient());
         /*
         * Rename your App. Tip: Values->Strings
         * Enable Internet access for your App. Tip: Manifest
