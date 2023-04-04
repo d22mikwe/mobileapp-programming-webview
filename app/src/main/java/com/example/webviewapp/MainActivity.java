@@ -14,12 +14,12 @@ public class MainActivity extends AppCompatActivity {
     private WebView webView;
     public void showExternalWebPage(){
         // TODO: Add your code for showing external web page here
-        webView.loadUrl("https://www.youtube.com/");
+        webView.loadUrl("https://www.his.se/");
     }
 
     public void showInternalWebPage(){
         // TODO: Add your code for showing internal web page here
-        webView.loadUrl("https://www.youtube.com/");
+        webView.loadUrl("https://www.his.se/");
     }
 
     @Override
