@@ -10,10 +10,14 @@ import android.webkit.WebViewClient;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-public class MainActivity extends AppCompatActivity {
+import java.net.MalformedURLException;
+import java.net.URL;
 
+public class MainActivity extends AppCompatActivity {
+    private WebView webView;
     public void showExternalWebPage(){
         // TODO: Add your code for showing external web page here
+
     }
 
     public void showInternalWebPage(){
@@ -26,9 +30,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        WebView webView = findViewById(R.id.my_webview);
+        webView = findViewById(R.id.my_webview);
         webView.setWebViewClient(new WebViewClient());
-
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.loadUrl("https://www.youtube.com/");
         /*
         * Rename your App. Tip: Values->Strings
         * Enable Internet access for your App. Tip: Manifest
